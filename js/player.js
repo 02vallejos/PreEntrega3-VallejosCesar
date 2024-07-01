@@ -1,5 +1,7 @@
 
 
+
+
 let form = document.querySelector('.log-player')
 let playerXContainer = document.querySelector('.player_x');
 let playerOContainer = document.querySelector('.player_o');
@@ -86,6 +88,15 @@ function selectPlayer(player, role) {
 
         window.location.href = 'game.html';
     } else {
-        alert('Por favor, selecciona ambos jugadores.');
+        // alert('Por favor, selecciona ambos jugadores.');
+        Toastify({
+
+            text: "Debe seleccionar 2 juadores",
+            backgroundColor: 'red',
+            duration: 2000,
+            style: {
+                fontSize: '2rem' 
+            }
+            }).showToast();
     }
 });
